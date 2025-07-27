@@ -23,7 +23,12 @@
     "@raycast/eslint-config": "^1.0.11",
     "@types/node": "20.8.10",
     "@types/react": "18.3.3",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
     "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "husky": "^9.1.7",
     "prettier": "^3.3.3",
     "typescript": "^5.4.5"
   },
@@ -32,6 +37,12 @@
     "dev": "ray develop",
     "fix-lint": "ray lint --fix",
     "lint": "ray lint",
-    "publish": "npx @raycast/api@latest publish"
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write --ignore-unknown .",
+    "format:check": "prettier --check --ignore-unknown .",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean && npm run type-check && npm run lint",
+    "publish": "npx @raycast/api@latest publish",
+    "prepare": "husky"
   }
 }
