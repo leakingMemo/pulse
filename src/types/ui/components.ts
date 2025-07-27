@@ -3,10 +3,10 @@
  */
 
 import { ReactNode } from 'react';
-import { Account, Transaction, FinanceSummary } from '../domain/finance';
+import { Account, Transaction, FinancialSummary } from '../domain/finance';
 import { Task, Project, TaskStats } from '../domain/tasks';
 import { Habit, HabitStreak, HabitStats } from '../domain/habits';
-import { HealthMetric, Exercise, HealthSummary } from '../domain/health';
+import { HealthMetrics, Exercise, HealthSummary } from '../domain/health';
 
 /**
  * Base component state types
@@ -45,7 +45,7 @@ export interface EmptyState {
  */
 export interface DashboardProps {
   /** Finance section data */
-  financeData?: FinanceSummary;
+  financeData?: FinancialSummary;
   /** Health section data */
   healthData?: HealthSummary;
   /** Tasks section data */
@@ -81,7 +81,7 @@ export interface DashboardProps {
  */
 export interface FinanceSectionProps {
   /** Finance data */
-  data?: FinanceSummary;
+  data?: FinancialSummary;
   /** Loading state */
   loading: LoadingState;
   /** Error state */
@@ -229,7 +229,7 @@ export enum DashboardView {
   HEALTH = 'health',
   TASKS = 'tasks',
   HABITS = 'habits',
-  SETTINGS = 'settings'
+  SETTINGS = 'settings',
 }
 
 /**
@@ -332,7 +332,7 @@ export enum ChartType {
   BAR = 'bar',
   PIE = 'pie',
   DONUT = 'donut',
-  AREA = 'area'
+  AREA = 'area',
 }
 
 /**
@@ -381,7 +381,7 @@ export enum InputType {
   PASSWORD = 'password',
   SEARCH = 'search',
   DATE = 'date',
-  TIME = 'time'
+  TIME = 'time',
 }
 
 /**

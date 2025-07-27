@@ -13,31 +13,31 @@ export enum HKQuantityTypeIdentifier {
   BODY_MASS_INDEX = 'HKQuantityTypeIdentifierBodyMassIndex',
   LEAN_BODY_MASS = 'HKQuantityTypeIdentifierLeanBodyMass',
   BODY_FAT_PERCENTAGE = 'HKQuantityTypeIdentifierBodyFatPercentage',
-  
+
   // Fitness
   STEP_COUNT = 'HKQuantityTypeIdentifierStepCount',
   DISTANCE_WALKING_RUNNING = 'HKQuantityTypeIdentifierDistanceWalkingRunning',
   DISTANCE_CYCLING = 'HKQuantityTypeIdentifierDistanceCycling',
   FLIGHTS_CLIMBED = 'HKQuantityTypeIdentifierFlightsClimbed',
-  
+
   // Vitals
   HEART_RATE = 'HKQuantityTypeIdentifierHeartRate',
   BLOOD_PRESSURE_SYSTOLIC = 'HKQuantityTypeIdentifierBloodPressureSystolic',
   BLOOD_PRESSURE_DIASTOLIC = 'HKQuantityTypeIdentifierBloodPressureDiastolic',
   RESPIRATORY_RATE = 'HKQuantityTypeIdentifierRespiratoryRate',
-  
+
   // Active Energy
   ACTIVE_ENERGY_BURNED = 'HKQuantityTypeIdentifierActiveEnergyBurned',
   BASAL_ENERGY_BURNED = 'HKQuantityTypeIdentifierBasalEnergyBurned',
-  
+
   // Sleep
   SLEEP_ANALYSIS = 'HKCategoryTypeIdentifierSleepAnalysis',
-  
+
   // Nutrition
   DIETARY_ENERGY_CONSUMED = 'HKQuantityTypeIdentifierDietaryEnergyConsumed',
   DIETARY_PROTEIN = 'HKQuantityTypeIdentifierDietaryProtein',
   DIETARY_CARBOHYDRATES = 'HKQuantityTypeIdentifierDietaryCarbohydrates',
-  DIETARY_FAT_TOTAL = 'HKQuantityTypeIdentifierDietaryFatTotal'
+  DIETARY_FAT_TOTAL = 'HKQuantityTypeIdentifierDietaryFatTotal',
 }
 
 /**
@@ -172,7 +172,7 @@ export enum HKWorkoutActivityType {
   WATER_SPORTS = 'HKWorkoutActivityTypeWaterSports',
   WRESTLING = 'HKWorkoutActivityTypeWrestling',
   YOGA = 'HKWorkoutActivityTypeYoga',
-  OTHER = 'HKWorkoutActivityTypeOther'
+  OTHER = 'HKWorkoutActivityTypeOther',
 }
 
 /**
@@ -226,7 +226,7 @@ export enum HKWorkoutEventType {
   MOTION_PAUSED = 'HKWorkoutEventTypeMotionPaused',
   MOTION_RESUMED = 'HKWorkoutEventTypeMotionResumed',
   SEGMENT = 'HKWorkoutEventTypeSegment',
-  PAUSE_OR_RESUME_REQUEST = 'HKWorkoutEventTypePauseOrResumeRequest'
+  PAUSE_OR_RESUME_REQUEST = 'HKWorkoutEventTypePauseOrResumeRequest',
 }
 
 /**
@@ -250,7 +250,7 @@ export enum HKStatisticsOptions {
   DISCRETE_AVERAGE = 'HKStatisticsOptionDiscreteAverage',
   DISCRETE_MIN = 'HKStatisticsOptionDiscreteMin',
   DISCRETE_MAX = 'HKStatisticsOptionDiscreteMax',
-  CUMULATIVE_SUM = 'HKStatisticsOptionCumulativeSum'
+  CUMULATIVE_SUM = 'HKStatisticsOptionCumulativeSum',
 }
 
 /**
@@ -311,7 +311,7 @@ export interface DateInterval {
 export enum HKAuthorizationStatus {
   NOT_DETERMINED = 'HKAuthorizationStatusNotDetermined',
   SHARING_DENIED = 'HKAuthorizationStatusSharingDenied',
-  SHARING_AUTHORIZED = 'HKAuthorizationStatusSharingAuthorized'
+  SHARING_AUTHORIZED = 'HKAuthorizationStatusSharingAuthorized',
 }
 
 /**

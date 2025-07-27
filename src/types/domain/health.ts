@@ -40,27 +40,27 @@ export interface Exercise {
  * Types of exercise activities
  */
 export enum ExerciseType {
-  RUNNING = "running",
-  WALKING = "walking",
-  CYCLING = "cycling",
-  SWIMMING = "swimming",
-  WEIGHT_TRAINING = "weight_training",
-  YOGA = "yoga",
-  HIIT = "hiit",
-  SPORTS = "sports",
-  CARDIO = "cardio",
-  FLEXIBILITY = "flexibility",
-  OTHER = "other",
+  RUNNING = 'running',
+  WALKING = 'walking',
+  CYCLING = 'cycling',
+  SWIMMING = 'swimming',
+  WEIGHT_TRAINING = 'weight_training',
+  YOGA = 'yoga',
+  HIIT = 'hiit',
+  SPORTS = 'sports',
+  CARDIO = 'cardio',
+  FLEXIBILITY = 'flexibility',
+  OTHER = 'other',
 }
 
 /**
  * Exercise intensity levels
  */
 export enum IntensityLevel {
-  LOW = "low",
-  MODERATE = "moderate",
-  HIGH = "high",
-  VERY_HIGH = "very_high",
+  LOW = 'low',
+  MODERATE = 'moderate',
+  HIGH = 'high',
+  VERY_HIGH = 'very_high',
 }
 
 /**
@@ -77,10 +77,10 @@ export interface Distance {
  * Distance units
  */
 export enum DistanceUnit {
-  METERS = "meters",
-  KILOMETERS = "kilometers",
-  MILES = "miles",
-  YARDS = "yards",
+  METERS = 'meters',
+  KILOMETERS = 'kilometers',
+  MILES = 'miles',
+  YARDS = 'yards',
 }
 
 /**
@@ -143,11 +143,11 @@ export interface Nutrition {
  * Types of meals
  */
 export enum MealType {
-  BREAKFAST = "breakfast",
-  LUNCH = "lunch",
-  DINNER = "dinner",
-  SNACK = "snack",
-  OTHER = "other",
+  BREAKFAST = 'breakfast',
+  LUNCH = 'lunch',
+  DINNER = 'dinner',
+  SNACK = 'snack',
+  OTHER = 'other',
 }
 
 /**
@@ -300,19 +300,19 @@ export interface BloodGlucose {
  * Glucose measurement units
  */
 export enum GlucoseUnit {
-  MG_DL = "mg/dL",
-  MMOL_L = "mmol/L",
+  MG_DL = 'mg/dL',
+  MMOL_L = 'mmol/L',
 }
 
 /**
  * Glucose measurement timing
  */
 export enum GlucoseTiming {
-  FASTING = "fasting",
-  BEFORE_MEAL = "before_meal",
-  AFTER_MEAL = "after_meal",
-  BEDTIME = "bedtime",
-  RANDOM = "random",
+  FASTING = 'fasting',
+  BEFORE_MEAL = 'before_meal',
+  AFTER_MEAL = 'after_meal',
+  BEDTIME = 'bedtime',
+  RANDOM = 'random',
 }
 
 /**
@@ -341,10 +341,10 @@ export interface SleepData {
  * Sleep quality ratings
  */
 export enum SleepQuality {
-  POOR = "poor",
-  FAIR = "fair",
-  GOOD = "good",
-  EXCELLENT = "excellent",
+  POOR = 'poor',
+  FAIR = 'fair',
+  GOOD = 'good',
+  EXCELLENT = 'excellent',
 }
 
 /**
@@ -363,10 +363,10 @@ export interface SleepStage {
  * Types of sleep stages
  */
 export enum SleepStageType {
-  AWAKE = "awake",
-  LIGHT = "light",
-  DEEP = "deep",
-  REM = "rem",
+  AWAKE = 'awake',
+  LIGHT = 'light',
+  DEEP = 'deep',
+  REM = 'rem',
 }
 
 /**
@@ -391,31 +391,56 @@ export interface MentalHealthMetrics {
  * Mood ratings
  */
 export enum MoodRating {
-  VERY_BAD = "very_bad",
-  BAD = "bad",
-  NEUTRAL = "neutral",
-  GOOD = "good",
-  VERY_GOOD = "very_good",
+  VERY_BAD = 'very_bad',
+  BAD = 'bad',
+  NEUTRAL = 'neutral',
+  GOOD = 'good',
+  VERY_GOOD = 'very_good',
 }
 
 /**
  * Stress levels
  */
 export enum StressLevel {
-  VERY_LOW = "very_low",
-  LOW = "low",
-  MODERATE = "moderate",
-  HIGH = "high",
-  VERY_HIGH = "very_high",
+  VERY_LOW = 'very_low',
+  LOW = 'low',
+  MODERATE = 'moderate',
+  HIGH = 'high',
+  VERY_HIGH = 'very_high',
 }
 
 /**
  * Energy levels
  */
 export enum EnergyLevel {
-  EXHAUSTED = "exhausted",
-  TIRED = "tired",
-  NORMAL = "normal",
-  ENERGETIC = "energetic",
-  VERY_ENERGETIC = "very_energetic",
+  EXHAUSTED = 'exhausted',
+  TIRED = 'tired',
+  NORMAL = 'normal',
+  ENERGETIC = 'energetic',
+  VERY_ENERGETIC = 'very_energetic',
+}
+
+/**
+ * Health summary for dashboard
+ */
+export interface HealthSummary {
+  /** Today's step count */
+  stepsToday: number;
+  /** Today's exercise minutes */
+  exerciseMinutes: number;
+  /** Last night's sleep hours */
+  sleepHours?: number;
+  /** Current heart rate */
+  currentHeartRate?: number;
+  /** Recent workouts */
+  recentWorkouts: Exercise[];
+  /** Health metrics trend */
+  metricsTrend: { metric: string; trend: 'up' | 'down' | 'stable' }[];
+  /** Weekly summary */
+  weeklyStats: {
+    totalSteps: number;
+    totalExercise: number;
+    averageSleep: number;
+    workoutsCompleted: number;
+  };
 }

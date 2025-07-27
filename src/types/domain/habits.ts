@@ -59,7 +59,7 @@ export enum HabitCategory {
   MINDFULNESS = 'mindfulness',
   CREATIVITY = 'creativity',
   PERSONAL_CARE = 'personal_care',
-  OTHER = 'other'
+  OTHER = 'other',
 }
 
 /**
@@ -79,7 +79,7 @@ export enum FrequencyType {
   DAILY = 'daily',
   WEEKLY = 'weekly',
   MONTHLY = 'monthly',
-  CUSTOM = 'custom'
+  CUSTOM = 'custom',
 }
 
 /**
@@ -115,7 +115,7 @@ export enum TargetType {
   TIMES = 'times', // Complete X times
   DURATION = 'duration', // For X minutes/hours
   QUANTITY = 'quantity', // X amount (e.g., glasses of water)
-  BOOLEAN = 'boolean' // Simple yes/no completion
+  BOOLEAN = 'boolean', // Simple yes/no completion
 }
 
 /**
@@ -182,7 +182,7 @@ export enum ProgressMood {
   NEGATIVE = 'negative',
   NEUTRAL = 'neutral',
   POSITIVE = 'positive',
-  VERY_POSITIVE = 'very_positive'
+  VERY_POSITIVE = 'very_positive',
 }
 
 /**
@@ -193,7 +193,7 @@ export enum DifficultyRating {
   EASY = 'easy',
   MODERATE = 'moderate',
   HARD = 'hard',
-  VERY_HARD = 'very_hard'
+  VERY_HARD = 'very_hard',
 }
 
 /**
@@ -230,7 +230,7 @@ export interface HabitStatistics {
 export enum TrendDirection {
   IMPROVING = 'improving',
   STABLE = 'stable',
-  DECLINING = 'declining'
+  DECLINING = 'declining',
 }
 
 /**
@@ -334,7 +334,7 @@ export enum RewardType {
   BADGE = 'badge',
   POINTS = 'points',
   MILESTONE = 'milestone',
-  CUSTOM = 'custom'
+  CUSTOM = 'custom',
 }
 
 /**
@@ -375,4 +375,42 @@ export interface HabitGroup {
   createdAt: Date;
   /** Last update timestamp */
   updatedAt: Date;
+}
+
+/**
+ * Habit streak information
+ */
+export interface HabitStreak {
+  /** Habit ID */
+  habitId: string;
+  /** Current streak length */
+  currentStreak: number;
+  /** Longest streak */
+  longestStreak: number;
+  /** Streak start date */
+  streakStartDate?: Date;
+  /** Last completion date */
+  lastCompletionDate?: Date;
+  /** Whether streak is active */
+  isActive: boolean;
+}
+
+/**
+ * Habit statistics summary
+ */
+export interface HabitStats {
+  /** Total number of habits */
+  totalHabits: number;
+  /** Active habits */
+  activeHabits: number;
+  /** Habits completed today */
+  completedToday: number;
+  /** Average completion rate */
+  averageCompletionRate: number;
+  /** Total streaks */
+  totalStreaks: number;
+  /** Longest streak across all habits */
+  longestOverallStreak: number;
+  /** Habit breakdown by category */
+  categoryBreakdown: { category: HabitCategory; count: number }[];
 }

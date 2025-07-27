@@ -1,6 +1,6 @@
 /**
  * Main types exports for the Pulse Raycast extension
- * 
+ *
  * This file provides convenient access to all type definitions
  * across the application domains.
  */
@@ -8,7 +8,7 @@
 // Domain types
 export * from './domain';
 
-// API integration types  
+// API integration types
 export * from './api';
 
 // UI component types
@@ -19,23 +19,25 @@ export type {
   // Finance
   Account,
   Transaction,
-  FinanceSummary,
-  
+  FinancialSummary,
+
   // Health
-  HealthMetric,
+  HealthMetrics,
   Exercise,
   HealthSummary,
-  
+
   // Tasks
   Task,
   Project,
   TaskStats,
-  
+
   // Habits
   Habit,
   HabitStreak,
   HabitStats,
-  
+} from './domain';
+
+export type {
   // UI Components
   DashboardProps,
   FinanceSectionProps,
@@ -43,16 +45,20 @@ export type {
   TasksSectionProps,
   HabitsSectionProps,
   LoadingState,
-  ErrorState
-} from './domain';
+  ErrorState,
+} from './ui';
 
 export type {
   // Notion API
   NotionPage,
   NotionDatabase,
-  NotionProperty,
-  
+  NotionPropertySchema,
+
   // Banking API
-  PlaidAccount,
-  PlaidTransaction
+  Institution,
+  BankConnection,
+
+  // HealthKit API
+  HKQuantitySample,
+  HKWorkout,
 } from './api';
