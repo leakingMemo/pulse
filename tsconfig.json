@@ -4,8 +4,8 @@
   "compilerOptions": {
     "lib": ["es2023"],
     "module": "commonjs",
-    "target": "es2023",
-    "strict": true,
+    "target": "es2022",
+    "strict": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
