@@ -15,14 +15,21 @@ build/
 !src/**/*.ts
 !src/**/*.tsx
 
+# Keep config files
+!.eslintrc.js
+!jest.config.js
+
 # macOS
 .DS_Store
 
 # Editor
-.vscode/
 .idea/
 *.swp
 *.swo
+
+# VS Code settings are committed
+!.vscode/settings.json
+!.vscode/extensions.json
 
 # Environment
 .env
