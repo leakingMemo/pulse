@@ -11,7 +11,7 @@ export enum BankingProvider {
   MX = 'mx',
   FINICITY = 'finicity',
   OPEN_BANKING = 'open_banking',
-  MANUAL = 'manual'
+  MANUAL = 'manual',
 }
 
 /**
@@ -38,7 +38,7 @@ export interface BankingApiConfig {
 export enum ApiEnvironment {
   SANDBOX = 'sandbox',
   DEVELOPMENT = 'development',
-  PRODUCTION = 'production'
+  PRODUCTION = 'production',
 }
 
 /**
@@ -114,7 +114,7 @@ export enum InstitutionProduct {
   IDENTITY = 'identity',
   INVESTMENTS = 'investments',
   LIABILITIES = 'liabilities',
-  PAYMENT_INITIATION = 'payment_initiation'
+  PAYMENT_INITIATION = 'payment_initiation',
 }
 
 /**
@@ -125,7 +125,7 @@ export enum ConnectionStatus {
   DISCONNECTED = 'disconnected',
   ERROR = 'error',
   UPDATING = 'updating',
-  NEEDS_REAUTH = 'needs_reauth'
+  NEEDS_REAUTH = 'needs_reauth',
 }
 
 /**
@@ -191,7 +191,7 @@ export enum SyncStatus {
   IN_PROGRESS = 'in_progress',
   COMPLETED = 'completed',
   FAILED = 'failed',
-  PARTIAL = 'partial'
+  PARTIAL = 'partial',
 }
 
 /**
@@ -242,7 +242,7 @@ export enum TransactionWebhookCode {
   HISTORICAL_UPDATE = 'HISTORICAL_UPDATE',
   DEFAULT_UPDATE = 'DEFAULT_UPDATE',
   TRANSACTIONS_REMOVED = 'TRANSACTIONS_REMOVED',
-  SYNC_ERROR = 'SYNC_ERROR'
+  SYNC_ERROR = 'SYNC_ERROR',
 }
 
 /**
@@ -339,7 +339,7 @@ export interface ApiTransaction {
 export enum PaymentChannel {
   ONLINE = 'online',
   IN_STORE = 'in_store',
-  OTHER = 'other'
+  OTHER = 'other',
 }
 
 /**

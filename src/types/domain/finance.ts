@@ -34,13 +34,13 @@ export interface Account {
  * Types of financial accounts
  */
 export enum AccountType {
-  CHECKING = "checking",
-  SAVINGS = "savings",
-  CREDIT_CARD = "credit_card",
-  INVESTMENT = "investment",
-  LOAN = "loan",
-  MORTGAGE = "mortgage",
-  OTHER = "other",
+  CHECKING = 'checking',
+  SAVINGS = 'savings',
+  CREDIT_CARD = 'credit_card',
+  INVESTMENT = 'investment',
+  LOAN = 'loan',
+  MORTGAGE = 'mortgage',
+  OTHER = 'other',
 }
 
 /**
@@ -99,31 +99,31 @@ export interface Transaction {
  * High-level transaction categories
  */
 export enum TransactionCategory {
-  INCOME = "income",
-  HOUSING = "housing",
-  TRANSPORTATION = "transportation",
-  FOOD = "food",
-  UTILITIES = "utilities",
-  HEALTHCARE = "healthcare",
-  ENTERTAINMENT = "entertainment",
-  SHOPPING = "shopping",
-  EDUCATION = "education",
-  PERSONAL = "personal",
-  INSURANCE = "insurance",
-  INVESTMENT = "investment",
-  TRANSFER = "transfer",
-  OTHER = "other",
+  INCOME = 'income',
+  HOUSING = 'housing',
+  TRANSPORTATION = 'transportation',
+  FOOD = 'food',
+  UTILITIES = 'utilities',
+  HEALTHCARE = 'healthcare',
+  ENTERTAINMENT = 'entertainment',
+  SHOPPING = 'shopping',
+  EDUCATION = 'education',
+  PERSONAL = 'personal',
+  INSURANCE = 'insurance',
+  INVESTMENT = 'investment',
+  TRANSFER = 'transfer',
+  OTHER = 'other',
 }
 
 /**
  * Transaction processing status
  */
 export enum TransactionStatus {
-  PENDING = "pending",
-  POSTED = "posted",
-  CLEARED = "cleared",
-  FAILED = "failed",
-  CANCELLED = "cancelled",
+  PENDING = 'pending',
+  POSTED = 'posted',
+  CLEARED = 'cleared',
+  FAILED = 'failed',
+  CANCELLED = 'cancelled',
 }
 
 /**
@@ -178,12 +178,12 @@ export interface Budget {
  * Budget period types
  */
 export enum BudgetPeriod {
-  WEEKLY = "weekly",
-  BIWEEKLY = "biweekly",
-  MONTHLY = "monthly",
-  QUARTERLY = "quarterly",
-  YEARLY = "yearly",
-  CUSTOM = "custom",
+  WEEKLY = 'weekly',
+  BIWEEKLY = 'biweekly',
+  MONTHLY = 'monthly',
+  QUARTERLY = 'quarterly',
+  YEARLY = 'yearly',
+  CUSTOM = 'custom',
 }
 
 /**

@@ -58,7 +58,7 @@ export enum Priority {
   HIGH = 'high',
   MEDIUM = 'medium',
   LOW = 'low',
-  NONE = 'none'
+  NONE = 'none',
 }
 
 /**
@@ -70,7 +70,7 @@ export enum TaskStatus {
   BLOCKED = 'blocked',
   COMPLETED = 'completed',
   CANCELLED = 'cancelled',
-  ARCHIVED = 'archived'
+  ARCHIVED = 'archived',
 }
 
 /**
@@ -125,7 +125,7 @@ export enum ProjectStatus {
   ACTIVE = 'active',
   ON_HOLD = 'on_hold',
   COMPLETED = 'completed',
-  CANCELLED = 'cancelled'
+  CANCELLED = 'cancelled',
 }
 
 /**
@@ -175,7 +175,7 @@ export enum RecurrenceFrequency {
   BIWEEKLY = 'biweekly',
   MONTHLY = 'monthly',
   QUARTERLY = 'quarterly',
-  YEARLY = 'yearly'
+  YEARLY = 'yearly',
 }
 
 /**
@@ -188,7 +188,7 @@ export enum DayOfWeek {
   WEDNESDAY = 3,
   THURSDAY = 4,
   FRIDAY = 5,
-  SATURDAY = 6
+  SATURDAY = 6,
 }
 
 /**
@@ -324,5 +324,27 @@ export enum TaskActivityType {
   TIME_LOGGED = 'time_logged',
   COMPLETED = 'completed',
   REOPENED = 'reopened',
-  ARCHIVED = 'archived'
+  ARCHIVED = 'archived',
+}
+
+/**
+ * Task statistics and analytics
+ */
+export interface TaskStats {
+  /** Total number of tasks */
+  total: number;
+  /** Number of completed tasks */
+  completed: number;
+  /** Number of pending tasks */
+  pending: number;
+  /** Number of overdue tasks */
+  overdue: number;
+  /** Completion rate (0-1) */
+  completionRate: number;
+  /** Tasks completed today */
+  completedToday: number;
+  /** Tasks due today */
+  dueToday: number;
+  /** Average completion time in hours */
+  averageCompletionTime?: number;
 }
